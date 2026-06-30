@@ -1,18 +1,20 @@
 :root {
-  --bg: #FBF8F2;
-  --bg-2: #F4EEE3;
+  /* Turismo Médico palette — teal/cool, distinct from fixup-studio coral/cream */
+  --bg: #F4F8F9;
+  --bg-2: #E7F0F1;
   --surface: #FFFFFF;
-  --cream: #F0E9DB;
-  --sand: #E8DCC9;
-  --ink: #2A2520;
-  --ink-2: #5C544A;
-  --ink-soft: #8C8175;
-  --line: #EAE1D2;
-  --line-2: #DFD4C0;
-  --coral: #D85A40;
-  --coral-600: #BE4733;
-  --coral-press: #A53C2A;
-  --coral-tint: #FBEAE4;
+  --cream: #E1ECED;
+  --sand: #CFE0E1;
+  --ink: #16302E;
+  --ink-2: #3F5A57;
+  --ink-soft: #6E8784;
+  --line: #DCE8E8;
+  --line-2: #C7DADA;
+  /* --coral-* kept as token names for back-compat; values are now teal */
+  --coral: #0F8C8C;
+  --coral-600: #0C7373;
+  --coral-press: #095C5C;
+  --coral-tint: #E0F1F1;
   --naver: #2E9E5B; /* Naver brand green */
   --insta: #D24A8B;
   --kakao: #F4C20D;
@@ -24,7 +26,7 @@
   --urgent-tint: #FBE6E1;
   --radius: 18px;
   --radius-sm: 12px;
-  --surface-2: #FBF8F2;
+  --surface-2: #F4F8F9;
   --accent: var(--coral);
   --accent-600: var(--coral-600);
   --accent-press: var(--coral-press);
