@@ -118,7 +118,12 @@ export function PipelineBoard({ initial }: { initial: Clinica[] }) {
     <div className="space-y-4 p-6">
       <header className="flex items-center justify-between">
         <h1 className="font-display text-2xl text-ink">Pipeline de clínicas</h1>
-        <Button onClick={() => setAdding(true)}>+ Agregar clínica</Button>
+        <div className="flex items-center gap-2">
+          <Button variant="secondary" href="https://fixup-studio-dashboard.vercel.app/">
+            ↗ Dashboard Fixup
+          </Button>
+          <Button onClick={() => setAdding(true)}>+ Agregar clínica</Button>
+        </div>
       </header>
 
       <Metrics clinicas={clinicas} />
