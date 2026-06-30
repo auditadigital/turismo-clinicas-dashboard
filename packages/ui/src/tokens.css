@@ -1,0 +1,37 @@
+:root {
+  --bg: #FBF8F2;
+  --bg-2: #F4EEE3;
+  --surface: #FFFFFF;
+  --cream: #F0E9DB;
+  --sand: #E8DCC9;
+  --ink: #2A2520;
+  --ink-2: #5C544A;
+  --ink-soft: #8C8175;
+  --line: #EAE1D2;
+  --line-2: #DFD4C0;
+  --coral: #D85A40;
+  --coral-600: #BE4733;
+  --coral-press: #A53C2A;
+  --coral-tint: #FBEAE4;
+  --naver: #2E9E5B; /* Naver brand green */
+  --insta: #D24A8B;
+  --kakao: #F4C20D;
+  --good: #3E9E5B; /* semantic success green (differs from --naver by one hex digit, intentional) */
+  --warn: #E0A52E;
+  --urgent: #D8492F;
+  --good-tint: #E7F1E9;
+  --warn-tint: #F8EFD8;
+  --urgent-tint: #FBE6E1;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --surface-2: #FBF8F2;
+  --accent: var(--coral);
+  --accent-600: var(--coral-600);
+  --accent-press: var(--coral-press);
+  --accent-tint: color-mix(in srgb, var(--coral) 14%, var(--bg));
+  --on-accent: #FFFFFF;
+  --insta-grad: linear-gradient(135deg,#F7A04A 0%,#D24A8B 52%,#8A4FBF 100%);
+  --kakao-ink: #3A2D00;
+  --radius-lg: 26px;
+  --sec-pad: 64px;
+}

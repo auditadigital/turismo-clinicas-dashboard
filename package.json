@@ -1,0 +1,27 @@
+{
+  "name": "turismo-clinicas-dashboard",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "supabase": "^2.106.0",
+    "turbo": "^2.1.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "packageManager": "npm@10.8.2",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "ws": "^8.21.0"
+  }
+}

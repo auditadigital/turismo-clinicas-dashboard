@@ -1,0 +1,20 @@
+/* Button component classes — sistema de diseño compartido (Clínicas Dashboard) */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-noto-kr),"Noto Sans KR",sans-serif;font-weight:700;font-size:15px;cursor:pointer;
+  border-radius:13px;padding:14px 22px;border:1.5px solid transparent;
+  transition:.18s ease;line-height:1;text-align:center;white-space:nowrap;text-decoration:none;
+}
+.btn .ar{font-family:var(--font-space-mono),"Space Mono",monospace;font-weight:700;}
+.btn-primary{background:var(--accent-600);color:var(--on-accent);box-shadow:0 10px 22px -12px color-mix(in srgb,var(--accent) 70%,transparent);}
+.btn-primary:hover{background:var(--accent-press);transform:translateY(-2px);}
+.btn-secondary{background:var(--surface);color:var(--ink);border-color:var(--line-2);}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent-600);}
+.btn-ghost{background:transparent;color:var(--accent-600);}
+.btn-ghost:hover{background:var(--accent-tint);}
+.btn-kakao{background:#FEE500;color:#3A2D00;}
+.btn-kakao:hover{background:#F4D900;transform:translateY(-2px);}
+.btn-lg{padding:16px 26px;font-size:16px;}
+.btn-block{width:100%;}
+.btn-icn{width:17px;height:17px;flex:0 0 auto;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}

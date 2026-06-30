@@ -1,0 +1,7 @@
+@import "@clinicas/ui/tokens.css";
+@import "@clinicas/ui/buttons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { background: var(--bg); color: var(--ink); }

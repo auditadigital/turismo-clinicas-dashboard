@@ -1,0 +1,25 @@
+{
+  "name": "@clinicas/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+    "./database.types": "./src/database.types.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "gen:types": "supabase gen types typescript --linked > src/database.types.ts",
+    "lint": "echo no-lint"
+  },
+  "dependencies": {
+    "@clinicas/types": "*",
+    "@supabase/supabase-js": "^2.45.0",
+    "server-only": "^0.0.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": { "@types/ws": "^8.5.12", "typescript": "^5.5.4" }
+}
