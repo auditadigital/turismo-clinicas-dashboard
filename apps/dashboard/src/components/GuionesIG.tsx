@@ -80,7 +80,6 @@ export function GuionesIG({ clinica }: { clinica: Clinica }) {
   const [idioma, setIdioma] = useState<Idioma>("ko");
   const [copiado, setCopiado] = useState<string | null>(null);
   const sugerido = guionSugerido(clinica.estado);
-  const igHandle = clinica.instagram?.replace(/^@/, "");
 
   async function copiar(g: Guion) {
     const texto = personalizar(g.texto[idioma], clinica.nombre);
@@ -97,18 +96,8 @@ export function GuionesIG({ clinica }: { clinica: Clinica }) {
 
   return (
     <section className="mt-4">
-      <div className="mb-2 flex items-center justify-between">
+      <div className="mb-2">
         <h3 className="text-xs font-medium text-ink-soft">Guiones Instagram (DM)</h3>
-        {igHandle ? (
-          <a
-            href={`https://instagram.com/${igHandle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-coral underline"
-          >
-            Abrir @{igHandle} ↗
-          </a>
-        ) : null}
       </div>
 
       <div className="mb-3 flex gap-1">
