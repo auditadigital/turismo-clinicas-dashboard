@@ -15,6 +15,15 @@ function safeHref(url: string): string {
   return /^https?:\/\//i.test(url) ? url : `https://${url}`;
 }
 
+// Acepta un handle ('@x', 'x') o una URL completa y devuelve solo el usuario.
+function igHandle(v: string): string {
+  return v
+    .trim()
+    .replace(/^@/, "")
+    .replace(/^https?:\/\/(www\.)?instagram\.com\//i, "")
+    .replace(/\/+$/, "");
+}
+
 function history(c: Clinica): { label: string; date: string }[] {
   const rows: { label: string; date?: string }[] = [
     { label: "Research", date: c.fecha_research },
@@ -82,12 +91,12 @@ export function ClinicaDrawer({
             <div>
               IG{" "}
               <a
-                href={`https://instagram.com/${c.instagram.replace(/^@/, "")}`}
+                href={`https://instagram.com/${igHandle(c.instagram)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-coral underline"
               >
-                {`@${c.instagram.replace(/^@/, "")}`}
+                {`@${igHandle(c.instagram)}`}
               </a>
             </div>
           ) : null}
