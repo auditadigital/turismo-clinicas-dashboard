@@ -13,10 +13,12 @@ function safeEqual(a: string, b: string): boolean {
 }
 
 export function middleware(req: NextRequest) {
-  // Ingest acotado: el agente de research (cloud) crea/lista clínicas con un
-  // Bearer token. Solo aplica a la colección /api/clinicas (no a [id]/estado/patch/delete).
+  // Ingest + mantenimiento acotado: el agente de research (cloud) crea/lista/edita/
+  // borra clínicas con un Bearer token. Aplica a toda la rama /api/clinicas
+  // (colección y /[id], incluye estado/patch/delete) para que la routine pueda
+  // auto-limpiar leads que no cumplen las reglas (sin Instagram, web en inglés).
   const ingest = process.env.INGEST_TOKEN;
-  if (ingest && req.nextUrl.pathname === "/api/clinicas") {
+  if (ingest && req.nextUrl.pathname.startsWith("/api/clinicas")) {
     const auth = req.headers.get("authorization");
     if (auth?.startsWith("Bearer ") && safeEqual(auth.slice(7), ingest)) {
       return NextResponse.next();
