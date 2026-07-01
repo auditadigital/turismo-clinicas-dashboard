@@ -4,6 +4,7 @@ import type { TipoClinica, Clinica } from "@clinicas/types";
 import { ESTADO_LABELS, nextEstado } from "@clinicas/types";
 import { Badge, Button, Card, Pill } from "@clinicas/ui";
 import { shortDate } from "@/lib/date";
+import { GuionesIG } from "./GuionesIG";
 
 const TIPO_LABELS: Record<TipoClinica, string> = {
   estetica: "Estética",
@@ -99,6 +100,8 @@ export function ClinicaDrawer({
             </Button>
           </section>
         ) : null}
+
+        <GuionesIG clinica={c} />
 
         <section className="mt-4">
           <Card className="space-y-1 text-sm">
